@@ -1,0 +1,381 @@
+{
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "window.zoomLevel": 0.2,
+  "workbench.startupEditor": "none",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.activityBar.location": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "breadcrumbs.enabled": false,
+  "chat.titleBar.signIn.enabled": false,
+  "chat.titleBar.openInAgentsWindow.enabled": false,
+  "workbench.browser.showInTitleBar": false,
+  "extensions.ignoreRecommendations": true,
+  "update.mode": "none",
+  "update.showReleaseNotes": false,
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+  "window.title": "${rootName}",
+  // =========================================================================
+  // TABS & EXPLORER
+  // =========================================================================
+  "workbench.editor.showTabs": "multiple",
+  "workbench.editor.tabSizing": "fit",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "window.density.editorTabHeight": "compact",
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.enablePreview": false,
+  "workbench.tree.indent": 12,
+  "explorer.compactFolders": true,
+  // =========================================================================
+  // EDITOR & FONTS
+  // =========================================================================
+  "editor.fontFamily": "'Maple Mono', 'JetBrainsMono Nerd Font', monospace",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+  "editor.lineNumbers": "relative",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.inlayHints.enabled": "off",
+  "editor.occurrencesHighlight": "off",
+  "editor.selectionHighlight": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 0,
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.tabCompletion": "off",
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "markup.underline",
+          "entity.name.variable"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "editor.wordWrap": "on",
+  "editor.maxTokenizationLineLength": 40000,
+  "editor.showFoldingControls": "never",
+  "editor.folding": false,
+  "editor.hover.enabled": "off",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  // =========================================================================
+  // TERMINAL & REMOTE SSH
+  // =========================================================================
+  "terminal.integrated.fontSize": 12,
+  "remote.SSH.useExecServer": false,
+  "remote.SSH.useLocalServer": false,
+  "remote.SSH.remotePlatform": {
+    "192.168.0.6": "linux",
+    "100.96.20.30": "linux"
+  },
+  // =========================================================================
+  // LSP & LANGUAGES (C++, Rust, Haskell)
+  // =========================================================================
+  // C / C++ (clangd)
+  "clangd.path": "clangd",
+  "clangd.checkUpdates": false,
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--completion-style=detailed",
+    "--header-insertion=iwyu",
+    "--fallback-style=Google"
+  ],
+  // Rust (rust-analyzer)
+  "rust-analyzer.server.path": "rust-analyzer",
+  "rust-analyzer.checkOnSave": true,
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "rust-analyzer.hover.actions.enable": false,
+  "rust-analyzer.showUnlinkedFileNotification": false,
+  // Haskell (HLS)
+  "haskell.manageHLS": "PATH",
+  "haskell.serverExecutablePath": "haskell-language-server",
+  "haskell.formattingProvider": "ormolu",
+  // =========================================================================
+  // VIM CONFIGURATION & KEYBINDINGS
+  // =========================================================================
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.overrideCopy": true,
+  "vim.hlsearch": true,
+  "vim.cursorStylePerMode.normal": "block",
+  "vim.cursorStylePerMode.insert": "block",
+  "vim.cursorStylePerMode.visual": "block",
+  "vim.cursorStylePerMode.replace": "block",
+  "editor.cursorBlinking": "blink",
+  "vim.showmodename": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // General & UI
+    {
+      "before": [
+        "<Esc>"
+      ],
+      "commands": [
+        ":nohl"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "x"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    // Buffer / Tab Navigation
+    {
+      "before": [
+        "<tab>"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<S-tab>"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
+    },
+    // Window / Split Navigation
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "j"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "K"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    // Code Actions & LSP
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        "editor.action.revealDefinition"
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "r"
+      ],
+      "commands": [
+        "editor.action.referenceSearch.trigger"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "k"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "n"
+      ],
+      "commands": [
+        "editor.action.rename"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "s"
+      ],
+      "commands": [
+        "editor.action.formatDocument",
+        "workbench.action.files.save"
+      ]
+    },
+    // Find It Faster (Telescope style)
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "find-it-faster.findFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "g"
+      ],
+      "commands": [
+        "find-it-faster.findWithinFiles"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "t"
+      ],
+      "commands": [
+        "find-it-faster.findFilesWithType"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "w"
+      ],
+      "commands": [
+        "find-it-faster.findWithinFilesWithType"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "/"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "a"
+      ],
+      "commands": [
+        "editor.action.quickFix"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "-"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.open"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<cr>"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.select"
+        }
+      ]
+    },
+    {
+      "before": [
+        "<c-l>"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.refresh"
+        }
+      ]
+    },
+    {
+      "before": [
+        "`"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.cd"
+        }
+      ]
+    },
+    {
+      "before": [
+        "g",
+        "d"
+      ],
+      "commands": [
+        {
+          "command": "oil-code.toggleDetails"
+        }
+      ]
+    }
+  ],
+  // =========================================================================
+  // OIL.CODE (File System as a Buffer)
+  // =========================================================================
+  "oil-code.hasNerdFont": true,
+  "network.meteredConnection": "off",
+  "security.workspace.trust.untrustedFiles": "open",
+
+}
